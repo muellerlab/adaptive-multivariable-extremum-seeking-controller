@@ -1,7 +1,7 @@
 import numpy as np
 from first_order_filters import Low_pass_filter_first_order, High_pass_filter_first_order
 
-class Extremum_seeking_control:
+class esc:
     #cutoff_frequencies in rad/s
     def __init__(self, sampling_period, disturbance_frequency, 
                  disturbance_magnitude, integrator_gain, initial_search_value, 

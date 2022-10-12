@@ -1,7 +1,7 @@
 import numpy as np
 import matplotlib.pyplot as plt
 
-from extremum_seeking import Extremum_seeking_control
+from extremum_seeking_control import esc
 
 def cost_function(speed, sideslip):
     return 100 + speed**2 + 50 * np.power(sideslip-np.pi/2, 2)
@@ -22,9 +22,9 @@ integrator_gain = -0.05
 
 step_num = np.int(end_time/dt)
 
-speed_extremum_seeking = Extremum_seeking_control(dt, speed_frequency, speed_disturbance_magnitude, integrator_gain,
+speed_extremum_seeking = esc(dt, speed_frequency, speed_disturbance_magnitude, integrator_gain,
                                                   init_speed, speed_frequency, speed_frequency, True)
-sideslip_extremum_seeking = Extremum_seeking_control(dt, sideslip_frequency, sideslip_disturbance_magnitude, integrator_gain,
+sideslip_extremum_seeking = esc(dt, sideslip_frequency, sideslip_disturbance_magnitude, integrator_gain,
                                                   init_sideslip, sideslip_frequency, sideslip_frequency, True)
 
 #data to log
