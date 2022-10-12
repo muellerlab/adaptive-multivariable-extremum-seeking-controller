@@ -7,7 +7,7 @@ This repository contains the example code for adaptive multivariable extreme see
 Both python2 and python3 are allowed to run the example code without no additional dependency other than `numpy` and `matplotlib`.
 
 ### Test
-Run `python adaptive_multivariable_esc/extreme_seeking_test.py`.
+Run `python adaptive_multivariable_extreme_seeking_controller/extreme_seeking_control_test.py`.
 
 ### Important Notes
 The `cost_function()` is assumed to be known in this simulation code. In fact, this function is assumed to be unknown based on model-free setup in this paper. Readers shall also be aware that this function is never explicit used in the simulation code.
